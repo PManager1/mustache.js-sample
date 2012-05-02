@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+
+<head>
+<title> Mustache </title>
+</head>
+
+<body>
+
+	<script src="http://github.com/janl/mustache.js/raw/master/mustache.js">
+	</script>
+
+<script type="text/javascript">
+	var data, template, html;
+
+	data = {
+			name:  "Some Text Sites", 
+  		sites: ["Nettuts+", "Psdtuts+", "Mobiletuts+"]
+};
+
+
+template2 = "<h3>{{name}}</h3> <ul> {{#sites}} <li> {{.}} </li>  {{/sites}} </ul> ";  // creating a block
+
+html = Mustache.to_html(template2, data);
+
+document.write(html);
+</script>
+
+</body>
+</html>
